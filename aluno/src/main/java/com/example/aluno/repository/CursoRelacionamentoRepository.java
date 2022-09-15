@@ -9,6 +9,8 @@ import com.example.aluno.model.CursoRelacionamento;
 
 @Repository
 public interface CursoRelacionamentoRepository extends JpaRepository<CursoRelacionamento, Integer> {
+	
 	boolean existsByIdMatriculaAndIdCurso(Integer idMatricula, Integer idCurso);
 	List<CursoRelacionamento> findByStatus(String status);
+	
 }
